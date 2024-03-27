@@ -1,0 +1,143 @@
+:root {
+   --yellow: hsl(47, 88%, 63%);
+   --white: hsl(0, 0%, 100%);
+   --grey: hsl(0, 0%, 50%);
+   --black: hsl(0, 0%, 7%);
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+   margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+   -webkit-font-smoothing: antialiased;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: calc(100vh);
+   overflow: hidden;
+
+   background-color: var(--yellow);
+   font-family: "Figtree", sans-serif;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+   display: block;
+   max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+   font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   overflow-wrap: break-word;
+   font-size: 16px;
+   font-weight: 800;
+   line-height: 1.5;
+}
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+   isolation: isolate;
+}
+
+article {
+   display: grid;
+   gap: 1.225rem;
+   margin: 0 2rem;
+   padding: 2rem;
+   max-width: 400px;
+
+   background-color: var(--white);
+   border: 1px solid var(--black);
+   border-radius: 20px;
+   box-shadow: 10px 10px 1px var(--black);
+}
+
+article > picture > img {
+   width: 100%;
+   object-fit: fill;
+   border-radius: .5rem;
+   margin-bottom: .6rem;;
+}
+
+.infos {
+   display: grid;
+   gap: 1rem;
+}
+
+.category > span {
+   font-weight: 800;
+   border-radius: .3rem;
+   padding: .6rem;
+   background-color: var(--yellow);
+}
+
+.category > span:hover {
+   background-color: var(--grey);
+}
+
+#publication-date,
+h2 {
+   font-weight: 500;
+}
+
+#publication-date {
+   margin-top: .5rem;
+}
+
+.author {
+   display: flex;
+   align-items: center;
+   margin-top: 1rem;
+}
+
+.author > picture > img {
+   width: 70%
+}
+
+h1 {
+   font-size: 23px;
+}
+
+h2 {
+   color: var(--grey);
+}
